@@ -1,0 +1,4 @@
+
+# exclude env from going in docker
+.venv
+venv/

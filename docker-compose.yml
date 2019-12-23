@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web-api:
+    image: web-api:1.0.0
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - ./app/templates:/app/templates
+      - ./app/static:/app/static
