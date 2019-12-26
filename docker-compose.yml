@@ -6,7 +6,7 @@ services:
       context: ./app
       dockerfile: Dockerfile
     ports:
-      - 5001:5000
+      - 5001:5001
     volumes:
       - ./app/templates:/app/templates
       - ./app/static:/app/static

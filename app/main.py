@@ -16,7 +16,7 @@ app = FastAPI(title=TITLE, description=DESCRIPTION, docs_url=None, redoc_url=Non
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
-list_img = os.listdir("static")
+list_img = [img for img in os.listdir("static") if "fpqll" not in img]
 
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -29,6 +29,7 @@ async def not_found(request, exc):
 
 async def get_random_image() -> str:
     random.shuffle(list_img)
+
     return f"/static/{list_img[0]}"
 
 

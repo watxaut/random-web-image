@@ -6,4 +6,4 @@ RUN pip3 install -r requirements.txt
 
 ADD ./ /app
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000", "--proxy-headers"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5001", "--proxy-headers"]
