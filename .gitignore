@@ -2,6 +2,7 @@
 venv/
 app/static
 helper.py
+create_jsons.py
 .idea
 
 # Created by https://www.gitignore.io/api/python,pycharm

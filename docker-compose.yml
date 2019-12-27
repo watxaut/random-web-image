@@ -1,7 +1,7 @@
 version: '3'
 services:
   web-api:
-    image: web-api:1.0.0
+    image: web-api:2.0.0
     build:
       context: ./app
       dockerfile: Dockerfile
