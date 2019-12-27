@@ -1,0 +1,65 @@
+[
+  {
+    "rel_path": "static/faces/manel_cara.png",
+    "t_face": [
+      142,
+      241,
+      365,
+      18
+    ]
+  },
+  {
+    "rel_path": "static/faces/maneladri2.png",
+    "t_face": [
+      82,
+      167,
+      211,
+      38
+    ]
+  },
+  {
+    "rel_path": "static/faces/manel_1.png",
+    "t_face": [
+      81,
+      150,
+      236,
+      0
+    ]
+  },
+  {
+    "rel_path": "static/faces/maneladri1.png",
+    "t_face": [
+      231,
+      349,
+      498,
+      82
+    ]
+  },
+  {
+    "rel_path": "static/faces/manel22.jpeg",
+    "t_face": [
+      204,
+      418,
+      590,
+      33
+    ]
+  },
+  {
+    "rel_path": "static/faces/manel12.jpeg",
+    "t_face": [
+      167,
+      266,
+      390,
+      43
+    ]
+  },
+  {
+    "rel_path": "static/faces/manel44.jpeg",
+    "t_face": [
+      171,
+      260,
+      439,
+      0
+    ]
+  }
+]
