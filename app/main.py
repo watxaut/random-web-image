@@ -83,7 +83,13 @@ async def feeling_lucky(request: Request):
     i = random.randint(0, len(l_json_backgrounds) - 1)
 
     url = create_montage(l_json_backgrounds[i], l_json_faces)
-    url = url.replace("/app", "")
+    if url is not None:
+        url = url.replace("/app", "")
+        str_img_number = "? out of ???"
+    else:
+        url = "static/fpqll.png"
+        str_img_number = "woopsies, it crashed. Enjoy this Fran Perea"
+
     logger.info(f"URL showing: {url}")
 
-    return templates.TemplateResponse("main.html", {"request": request, "url": url, "str_img_number": "? out of ???"})
+    return templates.TemplateResponse("main.html", {"request": request, "url": url, "str_img_number": str_img_number})

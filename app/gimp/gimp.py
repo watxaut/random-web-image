@@ -172,7 +172,7 @@ def manelitify(background_img, l_img_faces, only_face, root_folder):
             p1 = tuple(p1)
 
             # resize the face and paste it into the background image
-            im_face_aux = im_face.resize((face_new_width, face_new_height), Image.ANTIALIAS)
+            im_face_aux = im_face.resize((face_new_width, face_new_height), Image.ANTIALIAS).convert("RGBA")
             im_base.paste(im_face_aux, p1, im_face_aux)
 
         else:  # if only the face needs to get pasted it's easier
@@ -180,7 +180,7 @@ def manelitify(background_img, l_img_faces, only_face, root_folder):
             # just crop the new face, resize it to match the background face and paste it
             im_face = im_face.crop((f_left, f_upper, f_right, f_lower))
 
-            im_face_aux = im_face.resize((width, height), Image.ANTIALIAS)
+            im_face_aux = im_face.resize((width, height), Image.ANTIALIAS).convert("RGBA")
             im_base.paste(im_face_aux, (left, upper), im_face_aux)
 
     return im_base
