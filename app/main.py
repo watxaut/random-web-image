@@ -67,7 +67,7 @@ def create_montage(background_img, json_faces, only_face=False):
     url = f'/app/static/tmp/i_{str(time.time()).replace(".", "_")}.jpeg'
 
     try:
-        im_out = gimp.manelitify(background_img, json_faces, only_face, "static/backgrounds")
+        im_out = gimp.manelitify(background_img, json_faces, only_face)
     except:  # something wrong with the image jej
         logger.error(traceback.format_exc())
         logger.error('Something wrong with image: "{}"'.format(background_img["rel_path"]))
